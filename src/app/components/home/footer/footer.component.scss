@@ -1,0 +1,51 @@
+.footer{
+    background-color: black;
+    border-top: 2px solid #222;
+    padding: 70px 45px;
+    margin: 8px auto auto auto;
+
+    div{
+        min-width: 190px;
+        width: 100%;
+        padding-bottom: 20px;
+        font-size: 1em;
+        color: #757575;
+        position: relative;
+        margin: auto;
+        max-width: 800px;
+    }
+
+    p{
+        text-align: left;
+    }
+
+    ul{
+        max-width: 1000px;
+        font-size: 13px;
+        box-sizing: border-box;
+        padding-left: 0;
+    }
+
+    li{
+        box-sizing: border-box;
+        padding: 0;
+        margin-bottom: 16px;
+        display: inline-block;
+        min-width: 100px;
+        width: 25%;
+        padding-right: 12px;
+        vertical-align: top;
+    }
+
+    a{
+        text-decoration: none;
+        color: #757575;
+    }
+
+    @media only screen and (max-width: 625px) {
+        li{
+            width: 33%;
+        }
+
+    }
+}
