@@ -1,7 +1,7 @@
 @import '@angular/material/theming';
 @include mat-core();
 
-$custom-app-primary: mat-palette($mat-red);
+$custom-app-primary: mat-palette($mat-red, A400);
 
 $custom-app-secundary: mat-palette($mat-blue);
 

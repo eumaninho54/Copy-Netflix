@@ -30,7 +30,6 @@
     margin: auto;
     padding-top: 220px;
     width: 100%;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
   
     h1 {
       text-align: center;
@@ -39,6 +38,7 @@
       margin: auto;
       max-width: 550px;
       line-height: 1.1;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
     }
   
     p {
@@ -46,6 +46,7 @@
       margin: auto;
       width: 450px;
       padding-top: 20px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
     }
   
     div p {
@@ -53,11 +54,13 @@
       margin: auto;
       width: 450px;
       padding-top: 40px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
     }
   }
   
   ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    text-shadow: none;
   }
   
   mat-form-field {

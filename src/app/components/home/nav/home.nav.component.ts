@@ -3,8 +3,8 @@ import * as Aos from 'aos';
 
 @Component({
   selector: 'app-home-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  templateUrl: './home.nav.component.html',
+  styleUrls: ['./home.nav.component.scss']
 })
 export class HomeNavComponent implements OnInit {
 
