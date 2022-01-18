@@ -1,20 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import * as Aos from 'aos';
 
 @Component({
-  selector: 'app-home-nav',
+  selector: 'app-login-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class HomeNavComponent implements OnInit {
+export class LoginNavComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
-    Aos.init({
-      duration: 2000,
-      
-    })
   }
 
 }
