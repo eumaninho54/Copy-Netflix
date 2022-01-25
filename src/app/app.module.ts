@@ -9,7 +9,7 @@ import { LoginModule } from './views/login/login.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

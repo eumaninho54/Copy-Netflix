@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnChanges, OnInit, Renderer2 } from '@angular/core';
 import * as Aos from 'aos';
 
 @Component({
@@ -8,7 +8,8 @@ import * as Aos from 'aos';
 })
 export class HomeNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
     Aos.init({
@@ -16,5 +17,4 @@ export class HomeNavComponent implements OnInit {
       
     })
   }
-
 }

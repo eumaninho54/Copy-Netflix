@@ -1,6 +1,7 @@
 .container {
   height: 100%;
   font-family: "Netflix Sans";
+  height: 1034px;
 }
 
 .gradient {
@@ -14,25 +15,24 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 100%;
+  height: 1034px;
   z-index: 1;
 }
 
 img {
   width: 100%;
   position: absolute;
-  height: 100%;
+  height: 1034px;
   object-fit: cover;
   opacity: 1;
 }
 
 .content {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   margin: auto;
   padding-top: 100px;
   width: 100%;
-
 
   .login-body {
     background-color: rgba(0, 0, 0, 0.781);
@@ -42,6 +42,38 @@ img {
     height: 520px;
     padding: 60px 75px;
   }
+
+  ::ng-deep
+    .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid
+    .mat-form-field-outline-thick {
+    color: rgb(255, 166, 0);
+  }
+
+  .message-error{
+    background-color: #E87C03;
+    color: #fff;
+    padding: 10px 20px;
+ 
+
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    
+    a{
+      padding: 0;
+      text-decoration: underline;
+      color: inherit;
+      background-color: transparent;
+    }
+
+    p{
+      margin: 0;
+    }
+  }
+
+	small{
+		color:rgb(219, 143, 0);
+	}
 
   mat-form-field {
     width: 100%;
@@ -60,7 +92,7 @@ img {
     border-radius: 5px;
   }
 
-  button{
+  button {
     margin-top: 30px;
     width: 100%;
     justify-content: center;
@@ -77,40 +109,35 @@ img {
     margin-bottom: 28px;
   }
 
-  .login-help{
+  .login-help {
     margin-top: 15px;
     color: rgb(199, 199, 199);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
   }
-  a{
+  a {
     text-decoration: none;
     color: rgb(199, 199, 199);
     margin-top: 0;
 
-    &:hover{
-      color: rgb(248, 98, 98) ;
+    &:hover {
+      color: rgb(248, 98, 98);
     }
   }
-  
-  .login-info{
+
+  .login-info {
     margin-top: 24px;
-    
-    mat-icon{
+
+    mat-icon {
       vertical-align: middle;
     }
-    p{
+    p {
       margin-top: 20px;
       font-size: 20px;
       color: rgb(100, 100, 100);
     }
-
   }
-
-
-
 }
 
 ::ng-deep .mat-checkbox-inner-container .mat-checkbox-background {
