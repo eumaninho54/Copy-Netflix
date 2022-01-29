@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import * as Aos from 'aos';
+import { LoginService } from 'src/app/views/login/login.service';
 
 @Component({
   selector: 'app-login-nav',
@@ -14,14 +14,13 @@ export class LoginNavComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private loginService: LoginService
   ) { }
 
   ngOnInit(): void {
     Aos.init({
       duration: 2000,
-      
     })
 
     this.loginFormGroup = this.formBuilder.group({
@@ -35,11 +34,11 @@ export class LoginNavComponent implements OnInit {
   loginSignIn(){
     if (this.loginFormGroup.invalid){
       this.messageError = true
-      alert("Error")
+      this.loginService.verificLogin(false)
 
     }else{
       this.messageError = false
-      this.router.navigate(['/'])
+      this.loginService.verificLogin(true)
     }
   }
 

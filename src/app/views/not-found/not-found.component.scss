@@ -1,0 +1,115 @@
+.container {
+  background-color: black;
+  height: 100vh;
+
+  .background {
+    margin-top: 100px;
+    height: 100%;
+
+    background-image: url("https://assets.nflxext.com/ffe/siteui/pages/errors/bg-lost-in-space.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  .smoky {
+    background-image: radial-gradient(
+      closest-side,
+      rgba(0, 0, 0, 0.541),
+      rgba(0, 0, 0, 0)
+    );
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 310px;
+
+  h1 {
+    font-size: 66px;
+    margin-bottom: 50px;
+    margin-top: 0;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 57%);
+    font-family: "Netflix sans";
+    font-weight: 700;
+    user-select: none;
+  }
+
+  .info {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 22px;
+    width: 50vw;
+
+    p {
+      font-size: 22px;
+      text-shadow: 0 1px 2px rgb(0 0 0 / 57%);
+      line-height: 25px;
+      font-weight: 300;
+      user-select: none;
+    }
+
+    button{
+        margin-top: 10px;
+        font-weight: bold;
+        font-family: "Netflix Sans";
+        font-size: 17px;
+
+        width: 150px;
+        height: 40px;
+
+        &:hover{
+            opacity: 70%;
+        }
+    }
+
+    .error{
+        margin-top: 145px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        mat-divider{
+            height: 60px;
+            border-width: 2px;
+            border-color: red;
+            user-select: none;
+            
+        }
+
+        p{
+            font-size: 28px;
+            text-shadow: none;
+            margin-left: 15px;
+            user-select: none;
+        }
+
+        span{
+            font-family: "Netflix Sans";
+            font-weight: 100;
+            user-select: none;
+        }
+    }
+  }
+}

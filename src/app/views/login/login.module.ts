@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { TemplatesSharedModule } from 'src/app/templates/templatesShared.module';
 import { LoginComponent } from './login.component';
 import { LoginNavComponent } from 'src/app/components/login/nav/login.nav.component';
-import { LoginHeaderComponent} from "src/app/components/login/header/login.header.component"
 import { LoginFooterComponent } from 'src/app/components/login/footer/login.footer.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -20,12 +20,12 @@ import { MatNativeDateModule } from '@angular/material/core';
   declarations: [
     LoginComponent,
     LoginNavComponent,
-    LoginHeaderComponent,
     LoginFooterComponent
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
+    TemplatesSharedModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,

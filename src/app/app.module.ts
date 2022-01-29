@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 
 import { HomeModule } from './views/home/home.module';
 import { LoginModule } from './views/login/login.module';
+import { BrowseModule } from './views/browse/browse.module';
+import { NotFoundModule } from './views/not-found/not-found.module';
+import { LoginGuard } from './guards/login.guard';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,11 @@ import { LoginModule } from './views/login/login.module';
     AppRoutingModule,
     CommonModule,
     HomeModule,
-    LoginModule
+    LoginModule,
+    BrowseModule,
+    NotFoundModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

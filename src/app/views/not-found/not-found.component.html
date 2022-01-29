@@ -1,0 +1,20 @@
+<app-template-header-logo-netflix class="header"></app-template-header-logo-netflix>
+
+<section class="container">
+    <div class="background"></div>
+    <div class="smoky"></div>
+
+    <div class="content">
+        <h1>Lost your way?</h1>
+        <div class="info">
+            <p>Sorry, we can't find that page. You'll find lots to explore on the home page.</p>
+            <button (click)="backHome()" mat-raised-button>Netflix Home</button>
+
+            <div class="error">
+                <mat-divider [vertical]="true"></mat-divider>
+                <p><span>Error Code </span>NSES-404</p>
+            </div>
+        </div>
+
+    </div>
+</section>
