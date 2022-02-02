@@ -14,7 +14,7 @@ export class LoginGuard implements CanActivate, CanActivateChild, CanDeactivate<
   ){}
 
     private verificAcess(){
-      if (this.loginService.authenticatedLogin()){
+      if (this.loginService.authenticatedLogin() || this.loginService.authenticatedToken()){
         return true
       } 
   
@@ -27,7 +27,6 @@ export class LoginGuard implements CanActivate, CanActivateChild, CanDeactivate<
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-      console.log("activate")
       return this.verificAcess()
   }
 
@@ -35,7 +34,6 @@ export class LoginGuard implements CanActivate, CanActivateChild, CanDeactivate<
     route: Route,
     segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-      console.log("load")
       return this.verificAcess()
   }
 

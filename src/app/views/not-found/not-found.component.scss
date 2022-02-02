@@ -112,4 +112,26 @@
         }
     }
   }
+
+  .desc{
+    bottom: 0;
+    color: rgba(229, 229, 229, 0.801);
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: .1em;
+    line-height: 1.5vw;
+    margin: 2.5vw 4.8vw;
+    position: fixed;
+    right: 0;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 57%);
+
+    font-family: "Netflix Sans";
+    font-weight: bold;
+
+    span{
+      font-family: "Netflix Sans";
+      font-weight: lighter;
+      color: rgba(229,229,229,.57);
+    }
+  }
 }
