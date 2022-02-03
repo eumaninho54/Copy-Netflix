@@ -2,11 +2,11 @@ import { Component, ElementRef, OnChanges, OnInit, Renderer2 } from '@angular/co
 import * as Aos from 'aos';
 
 @Component({
-  selector: 'app-home-nav',
-  templateUrl: './home.nav.component.html',
-  styleUrls: ['./home.nav.component.scss']
+  selector: 'app-home-main',
+  templateUrl: './home.main.component.html',
+  styleUrls: ['./home.main.component.scss']
 })
-export class HomeNavComponent implements OnInit {
+export class HomeMainComponent implements OnInit {
 
   constructor(
   ) { }

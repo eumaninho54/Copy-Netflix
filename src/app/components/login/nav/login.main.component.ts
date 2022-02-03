@@ -4,11 +4,11 @@ import * as Aos from 'aos';
 import { LoginService } from 'src/app/views/login/login.service';
 
 @Component({
-  selector: 'app-login-nav',
-  templateUrl: './login.nav.component.html',
-  styleUrls: ['./login.nav.component.scss']
+  selector: 'app-login-main',
+  templateUrl: './login.Main.component.html',
+  styleUrls: ['./login.Main.component.scss']
 })
-export class LoginNavComponent implements OnInit {
+export class LoginMainComponent implements OnInit {
   messageError: boolean = false
   loginFormGroup!: FormGroup
 

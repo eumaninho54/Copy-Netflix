@@ -1,3 +1,4 @@
+import { HomeGuard } from './guards/Home.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -25,7 +26,8 @@ const routes: Routes = [
   },
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [HomeGuard]
   },
   {
     path: "**",

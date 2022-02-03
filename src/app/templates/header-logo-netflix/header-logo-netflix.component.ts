@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-template-header-logo-netflix',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-logo-netflix.component.scss']
 })
 export class HeaderLogoNetflixComponent implements OnInit {
+
+  @Input() pathRouter!:string
 
   constructor() { }
 

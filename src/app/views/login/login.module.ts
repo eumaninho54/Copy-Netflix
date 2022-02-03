@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { TemplatesSharedModule } from 'src/app/templates/templatesShared.module';
 import { LoginComponent } from './login.component';
-import { LoginNavComponent } from 'src/app/components/login/nav/login.nav.component';
+import { LoginMainComponent } from 'src/app/components/login/nav/login.main.component';
 import { LoginFooterComponent } from 'src/app/components/login/footer/login.footer.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -19,7 +19,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     LoginComponent,
-    LoginNavComponent,
+    LoginMainComponent,
     LoginFooterComponent
   ],
   imports: [

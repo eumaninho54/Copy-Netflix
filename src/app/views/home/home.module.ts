@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HomeHeaderComponent } from 'src/app/components/home/header/home.header.component';
-import { HomeNavComponent } from 'src/app/components/home/nav/home.nav.component';
+import { HomeMainComponent } from 'src/app/components/home/main/home.main.component';
 import { HomeFooterComponent } from 'src/app/components/home/footer/home.footer.component';
 import { HomeComponent } from './home.component';
 
@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     HomeComponent,
     HomeFooterComponent,
-    HomeNavComponent,
+    HomeMainComponent,
     HomeHeaderComponent
   ],
   imports: [

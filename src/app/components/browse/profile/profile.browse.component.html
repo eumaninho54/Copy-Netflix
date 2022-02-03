@@ -1,0 +1,36 @@
+<app-template-header-logo-netflix
+  pathRouter="/"
+  class="header"
+></app-template-header-logo-netflix>
+
+<div class="background"></div>
+
+<main class="container">
+  <section class="content">
+    <h1>Who is watching?</h1>
+    <div class="selectionProfile">
+
+        <div *ngFor="let profile of profiles" (click)="userSelected(profile.id)" class="profiles">
+            <img [src]="profile.image" alt="image_profile">
+            <h1>{{profile.name}}</h1>
+
+        </div>
+
+
+      <!--<div (click)="userSelected()" class="profiles">
+        <img
+          src="https://occ-0-1831-559.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABb7_xK-FFKYnTC7GwGIEmh9SAhb72XwHgWQIDhiX-GmSB0C-Jz7-eMJW8sL8OguWrgFIL3VWSMND6MssBT2-tzzF9Tyw.png?r=e59"
+          alt="image_profile"
+        />
+        <h1>User</h1>
+      </div>-->
+
+      <div class="addProfile">
+        <div class="image"></div>
+        <h1>Add profile</h1>
+      </div>
+    </div>
+
+    <a routerLink="ManageProfiles"><span>Manage profiles</span></a> 
+  </section>
+</main>
