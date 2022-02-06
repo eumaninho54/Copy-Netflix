@@ -5,7 +5,7 @@
       <div class="backDrop_content">  
         <h1>{{ randomBackDrop.title }}</h1>
         <div class="backDrop_info">
-          <span class="rating">{{ randomBackDrop.vote_average * 10 }} % Relevant</span>
+          <span class="rating">{{ randomBackDrop.vote_average * 10 }}% Relevant</span>
           <span>{{ randomBackDrop.release_date.slice(0,4) }}</span>
         </div>
         <p>{{ randomBackDrop.overview }}</p>
@@ -19,20 +19,80 @@
   </section>
 
   <section class="movies_divisions">
-    <section class="trending_now">
-      <h1>Trending Now</h1>
-      <div class="trending_now_movies">
+    <section class="category">
+      <h1>Trending now</h1>
+      <div class="category_movies">
 
-        <button (click)="swipePrev()" class="buttonLeft"><mat-icon>arrow_back_ios</mat-icon></button>
-        <button (click)="swipeNext()" class="buttonRight"><mat-icon>arrow_forward_ios</mat-icon></button>
-        <swiper [slidesPerView]="slidesPerView" [spaceBetween]="10">
+        <button (click)="swipePrev(1)" class="buttonLeft"><mat-icon>arrow_back_ios</mat-icon></button>
+        <button (click)="swipeNext(1)" class="buttonRight"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <swiper #swiper1 [slidesPerView]="slidesPerView" [spaceBetween]="10">
           <ng-template swiperSlide *ngFor="let movie of trendingNow">
-            <img src= "{{ 'https://image.tmdb.org/t/p/original' + movie.poster_path }}" alt="test1">
+            <img (click)="playMovie()" src= "{{ 'https://image.tmdb.org/t/p/original' + movie.poster_path }}" alt="test1">
           </ng-template>
         </swiper>
 
       </div>
-      
     </section>
+
+    <section class="category">
+      <h1>Top rated</h1>
+      <div class="category_movies">
+
+        <button (click)="swipePrev(2)" class="buttonLeft"><mat-icon>arrow_back_ios</mat-icon></button>
+        <button (click)="swipeNext(2)" class="buttonRight"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <swiper #swiper2 [slidesPerView]="slidesPerView" [spaceBetween]="10">
+          <ng-template swiperSlide *ngFor="let movie of topRated">
+            <img (click)="playMovie()" src= "{{ 'https://image.tmdb.org/t/p/original' + movie.poster_path }}" alt="test1">
+          </ng-template>
+        </swiper>
+
+      </div>
+    </section>
+
+    <section class="category">
+      <h1>Recommended</h1>
+      <div class="category_movies">
+
+        <button (click)="swipePrev(3)" class="buttonLeft"><mat-icon>arrow_back_ios</mat-icon></button>
+        <button (click)="swipeNext(3)" class="buttonRight"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <swiper #swiper3 [slidesPerView]="slidesPerView" [spaceBetween]="10">
+          <ng-template swiperSlide *ngFor="let movie of recommended">
+            <img (click)="playMovie()" src= "{{ 'https://image.tmdb.org/t/p/original' + movie.poster_path }}" alt="test1">
+          </ng-template>
+        </swiper>
+
+      </div>
+    </section>
+    
+    <section class="category">
+      <h1>Action</h1>
+      <div class="category_movies">
+
+        <button (click)="swipePrev(4)" class="buttonLeft"><mat-icon>arrow_back_ios</mat-icon></button>
+        <button (click)="swipeNext(4)" class="buttonRight"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <swiper #swiper4 [slidesPerView]="slidesPerView" [spaceBetween]="10">
+          <ng-template swiperSlide *ngFor="let movie of action">
+            <img (click)="playMovie()" src= "{{ 'https://image.tmdb.org/t/p/original' + movie.poster_path }}" alt="test1">
+          </ng-template>
+        </swiper>
+
+      </div>
+    </section>
+
+    <section class="category">
+      <h1>Drama</h1>
+      <div class="category_movies">
+
+        <button (click)="swipePrev(5)" class="buttonLeft"><mat-icon>arrow_back_ios</mat-icon></button>
+        <button (click)="swipeNext(5)" class="buttonRight"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <swiper #swiper5 [slidesPerView]="slidesPerView" [spaceBetween]="10">
+          <ng-template swiperSlide *ngFor="let movie of drama">
+            <img (click)="playMovie()" src= "{{ 'https://image.tmdb.org/t/p/original' + movie.poster_path }}" alt="test1">
+          </ng-template>
+        </swiper>
+
+      </div>
+    </section>
+
   </section>
 </div>

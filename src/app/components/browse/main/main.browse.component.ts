@@ -9,7 +9,11 @@ import { SwiperComponent } from 'swiper/angular';
 })
 export class MainBrowseComponent implements OnInit {
 
-  @ViewChild(SwiperComponent) swiper!: SwiperComponent
+  @ViewChild('swiper1') swiper1!: SwiperComponent
+  @ViewChild('swiper2') swiper2!: SwiperComponent
+  @ViewChild('swiper3') swiper3!: SwiperComponent
+  @ViewChild('swiper4') swiper4!: SwiperComponent
+  @ViewChild('swiper5') swiper5!: SwiperComponent
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any){
@@ -18,6 +22,11 @@ export class MainBrowseComponent implements OnInit {
 
   allMovies!: any;
   trendingNow!: any;
+  topRated!: any;
+  recommended!: any;
+  action!: any;
+  drama!: any;
+
   randomBackDrop!: any;
   slidesPerView!: number;
 
@@ -29,20 +38,68 @@ export class MainBrowseComponent implements OnInit {
     this.moviesService.read('/discover/movie?').subscribe(({results}) => {
       this.allMovies = results
       console.log(this.allMovies)
-      console.log(this.moviesService.allMovies)
       this.randomBackDrop = this.allMovies[Math.floor(Math.random() * this.allMovies.length)]
       this.resizeWidthImage()
     })
     this.moviesService.read('/trending/all/day?').subscribe(({results}) => {
       this.trendingNow = results
     })
+    this.moviesService.read('/movie/top_rated?').subscribe(({results}) =>{
+      this.topRated = results
+    })
+    this.moviesService.read('/movie/now_playing?').subscribe(({results}) =>{
+      this.recommended = results
+    })
+    this.moviesService.read('/movie/44943/similar?').subscribe(({results}) =>{
+      this.action = results
+    })
+    this.moviesService.read('/movie/25678/similar?').subscribe(({results}) =>{
+      this.drama = results
+      console.log(this.drama)
+    })
   }
 
-  swipePrev() {
-    this.swiper.swiperRef.slidePrev();
+  swipePrev(swiper: number) {
+    switch (swiper) {
+      case 1:
+        this.swiper1.swiperRef.slidePrev();
+        break;
+      case 2:
+        this.swiper2.swiperRef.slidePrev();
+        break;
+      case 3:
+        this.swiper3.swiperRef.slidePrev();
+        break;
+      case 4:
+        this.swiper4.swiperRef.slidePrev();
+        break;
+      case 5:
+        this.swiper5.swiperRef.slidePrev();
+        break;
+    }
   }
-  swipeNext() {
-    this.swiper.swiperRef.slideNext();
+  swipeNext(swiper: number) {
+    switch (swiper) {
+      case 1:
+        this.swiper1.swiperRef.slideNext();
+        break;
+      case 2:
+        this.swiper2.swiperRef.slideNext();
+        break;
+      case 3:
+        this.swiper3.swiperRef.slideNext();
+        break;
+      case 4:
+        this.swiper4.swiperRef.slideNext();
+        break;
+      case 5:
+        this.swiper5.swiperRef.slideNext();
+        break;
+    }
+  }
+
+  playMovie(){
+    alert("Playing movie :)")
   }
 
   resizeWidthImage(){

@@ -1,5 +1,6 @@
 .background {
   flex: 1 1 0%;
+  user-select: none;
 }
 
 .backDrop_image {
@@ -29,6 +30,7 @@
 
   h1{
     font-family: "Netflix Sans";
+    font-weight: bold;
     font-size: 35px;
     margin-bottom: 50px;
   }
@@ -72,6 +74,7 @@ p{
   button{
     margin-right: 10px;
     font-family: 'Netflix Sans';
+    font-weight: 600;
     font-size: 15px;
   }
 
@@ -102,24 +105,24 @@ p{
 }
 
 .movies_divisions{
-  margin: -320px 0px 200px 0px;
+  margin: -320px 0px 0px 0px;
   background-color: black;
   padding-bottom: 200px;
+  background: linear-gradient(to top, #000000 80%, transparent);
 
-  background: linear-gradient(to top, #000000 20%, transparent);
 }
 
-.trending_now{
-  //margin: 0px 45px 0px 45px;
-
+.category{
+  
   h1{
     font-family: "Netflix Sans";
+    font-weight: 600;
 
-    margin: 0px 45px 15px 3.5%;
+    margin: 0px 45px -30px 3.5%;
   }
 }
 
-.trending_now_movies{
+.category_movies{
   position: relative;
   overflow: hidden;
 
@@ -129,18 +132,34 @@ p{
   align-items: stretch;
   transition: margin-left 1s ease 0s;
 
+  swiper{
+    padding: 55px;
+  }
 
   img{
     width: 100%;
     max-width: 210px;
     border-radius: 4px;
+    transition: 0.4s;
+
+    &:hover{
+      position: absolute;
+      transition-delay: 0.2s;
+      transition-duration: 0.4s;
+      transform: scale(1.42);
+      z-index: 2;
+
+    }
   }
 }
 
 .buttonLeft{
   position: absolute;
-  height: 100%;
+  top: 0; bottom: 0;
+  left: 0;
+  height: 70%;
   border: none;
+  margin: auto;
   cursor: pointer;
   background-color: transparent;
   padding-left: 2px;
@@ -166,7 +185,10 @@ p{
 
 .buttonRight{
   position: absolute;
-  height: 100%;
+  top: 0; bottom: 0;
+  right: 0;
+  height: 70%;
+  margin: auto;
   border: none;
   cursor: pointer;
   background-color: transparent;
