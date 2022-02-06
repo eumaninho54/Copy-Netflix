@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import * as Aos from 'aos';
-import { LoginService } from 'src/app/views/login/login.service';
+import { LoginService } from 'src/app/components/login/login.service';
 
 @Component({
   selector: 'app-login-main',

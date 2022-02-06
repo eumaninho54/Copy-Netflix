@@ -5,7 +5,7 @@ import { userProfiles } from "src/app/components/browse/browse.model";
 @Injectable({
   providedIn: "root",
 })
-export class BrowseService {
+export class ProfileService {
 
   private authenticProfile: userProfiles | undefined;
   

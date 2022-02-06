@@ -1,1 +1,38 @@
-<p>main works!</p>
+<div class="background">
+  <section [ngStyle]="{ 'background-image': 'url(' + 'https://image.tmdb.org/t/p/original' + this.randomBackDrop.backdrop_path + ')' }" class="backDrop_image">
+    <div class="gradient">
+
+      <div class="backDrop_content">  
+        <h1>{{ randomBackDrop.title }}</h1>
+        <div class="backDrop_info">
+          <span class="rating">{{ randomBackDrop.vote_average * 10 }} % Relevant</span>
+          <span>{{ randomBackDrop.release_date.slice(0,4) }}</span>
+        </div>
+        <p>{{ randomBackDrop.overview }}</p>
+
+        <div class="backDrop_buttons">
+          <button class="button1" mat-raised-button><mat-icon>play_arrow</mat-icon> Watch</button>
+          <button class="button2" mat-raised-button><mat-icon>info</mat-icon> Informations</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="movies_divisions">
+    <section class="trending_now">
+      <h1>Trending Now</h1>
+      <div class="trending_now_movies">
+
+        <button (click)="swipePrev()" class="buttonLeft"><mat-icon>arrow_back_ios</mat-icon></button>
+        <button (click)="swipeNext()" class="buttonRight"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <swiper [slidesPerView]="slidesPerView" [spaceBetween]="10">
+          <ng-template swiperSlide *ngFor="let movie of trendingNow">
+            <img src= "{{ 'https://image.tmdb.org/t/p/original' + movie.poster_path }}" alt="test1">
+          </ng-template>
+        </swiper>
+
+      </div>
+      
+    </section>
+  </section>
+</div>

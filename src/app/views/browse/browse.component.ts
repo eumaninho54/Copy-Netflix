@@ -1,4 +1,4 @@
-import { BrowseService } from './browse.service';
+import { ProfileService } from '../../components/browse/profile/profile.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +11,7 @@ export class BrowseComponent implements OnInit{
   isSelected!: boolean;
 
   constructor(
-    private browseService: BrowseService
+    private ProfileService: ProfileService
   ) { }
 
   ngOnInit(): void {

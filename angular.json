@@ -54,7 +54,8 @@
             "styles": [
               "src/theme.scss",
               "src/styles.scss",
-              "node_modules/aos/dist/aos.css"
+              "node_modules/aos/dist/aos.css",
+              "node_modules/swiper/swiper-bundle.css"
             ],
             "scripts": [
               "node_modules/aos/dist/aos.js"

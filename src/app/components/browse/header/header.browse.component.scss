@@ -1,0 +1,111 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 15px;
+  z-index: 9;
+  background-image: linear-gradient(to bottom,rgba(24, 24, 24, 0.904),rgba(0, 0, 0, 0));
+
+
+  width: 100%;
+  height: 50px;
+}
+
+.container{
+  width: 93%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 30px;
+  margin-top: 2px;
+}
+
+.nav{
+  vertical-align: middle;
+
+  a{
+    text-decoration: none;
+    color: rgb(218, 218, 218);
+    margin-right: 15px;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: "Netflix Sans";
+    cursor: pointer;
+
+    &:hover{
+      color: rgb(255, 255, 255);
+   
+    }
+  }
+}
+
+.options{
+  
+  
+  a{
+    margin-right: 20px;
+    color: rgb(226, 226, 226);
+    cursor: pointer;
+  }
+
+  .img{
+    margin-right: 2px;
+
+  }
+
+  img{
+    width: 30px;
+    border-radius: 4px;
+    
+  }
+
+  mat-icon{
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 950px){
+  .logo{
+    height: 20px;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  a{
+    vertical-align: middle;
+    font-size: 14px !important;
+  }
+
+}
+
+@media only screen and (max-width: 580px){
+  .logo{
+    height: 15px !important;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  a{
+    vertical-align: middle;
+    font-size: 10px !important;
+  }
+
+  mat-icon{
+    transform: scale(0.7) !important;
+  }
+
+  .options{
+
+    a{
+      margin: 2px;
+    }
+  }
+}
+
+

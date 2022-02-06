@@ -1,3 +1,6 @@
 <app-profile-browse (isSelectedEmitter)='changeIsSelected($event)' *ngIf="isSelected == false"></app-profile-browse>
 
-<app-main-browse  *ngIf="isSelected == true"></app-main-browse>
+<app-header-browse pathRouter="/browse" *ngIf="isSelected == true"></app-header-browse>
+<app-main-browse   *ngIf="isSelected == true"></app-main-browse>
+<app-footer-browse *ngIf="isSelected == true"></app-footer-browse>
+

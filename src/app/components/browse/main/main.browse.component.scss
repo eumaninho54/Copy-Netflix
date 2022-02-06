@@ -1,0 +1,195 @@
+.background {
+  flex: 1 1 0%;
+}
+
+.backDrop_image {
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.gradient {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, rgb(0, 0, 0) 10%, transparent);
+}
+
+.backDrop_content{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  height: inherit;
+  padding-top: 250px;
+  margin-left: 3.5%;
+  width: 700px;
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.226);
+ 
+
+  h1{
+    font-family: "Netflix Sans";
+    font-size: 35px;
+    margin-bottom: 50px;
+  }
+}
+
+.backDrop_info{
+  display: flex;
+  flex-direction: row;
+
+  span{
+    margin-right: 20px;
+    font-size: 25px;
+  }
+  
+  .rating{
+    color: #54D675;
+  }
+}
+
+p{
+  font-size: 22px;
+  margin-top: 10px;
+  line-height: 30px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  max-height: 100px;  
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+
+.genres{
+  span{
+    color: rgb(173, 173, 173);
+  }
+}
+
+.backDrop_buttons{
+
+  button{
+    margin-right: 10px;
+    font-family: 'Netflix Sans';
+    font-size: 15px;
+  }
+
+  mat-icon{
+      margin-right: 5px;
+  }
+
+  .button1{
+    background-color: rgba(255, 255, 255, 0.747);
+
+    mat-icon{
+      transform: scale(1.4);
+    }
+
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.589);
+    }
+  }
+
+  .button2{
+    background-color: rgba(175, 175, 175, 0.507);
+    color: rgb(240, 240, 240);
+
+    &:hover{
+      background-color: rgba(175, 175, 175, 0.363);
+    }
+  }
+}
+
+.movies_divisions{
+  margin: -320px 0px 200px 0px;
+  background-color: black;
+  padding-bottom: 200px;
+
+  background: linear-gradient(to top, #000000 20%, transparent);
+}
+
+.trending_now{
+  //margin: 0px 45px 0px 45px;
+
+  h1{
+    font-family: "Netflix Sans";
+
+    margin: 0px 45px 15px 3.5%;
+  }
+}
+
+.trending_now_movies{
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  transition: margin-left 1s ease 0s;
+
+
+  img{
+    width: 100%;
+    max-width: 210px;
+    border-radius: 4px;
+  }
+}
+
+.buttonLeft{
+  position: absolute;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding-left: 2px;
+  z-index: 2;
+  width: 55px;
+
+  &:hover{
+    background-color: rgba(0, 0, 0, 0.164);
+
+    mat-icon{
+      transform: scale(2.8);
+    }
+  }
+
+  mat-icon{
+    transition: 0.4s;
+    color: white;
+    transform: scale(2);
+    margin-right: -20px;
+  }
+
+}
+
+.buttonRight{
+  position: absolute;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding-left: 2px;
+  z-index: 2;
+  width: 55px;
+  right: 0;
+
+  &:hover{
+    background-color: rgba(0, 0, 0, 0.164);
+
+    mat-icon{
+      transform: scale(2.8);
+    }
+  }
+
+  mat-icon{
+    transition: 0.4s;
+    color: white;
+    transform: scale(2);
+    margin-right: -20px;
+  }
+
+}
+
+
