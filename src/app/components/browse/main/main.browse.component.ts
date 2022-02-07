@@ -36,7 +36,7 @@ export class MainBrowseComponent implements OnInit {
   isLoading: boolean = false;
 
   lottieOptions: AnimationOptions = {
-    path: '../../../../assets/Lottie/29313-netflix-logo-swoop.json'
+    path: 'assets/Lottie/29313-netflix-logo-swoop.json'
   }
 
   constructor(
