@@ -234,5 +234,129 @@ p{
   justify-content: center;
 }
 
+@media only screen and (min-width: 1250px){
+
+  .category_movies{
+
+    swiper{
+      padding: 65px;
+  
+    }
+  }
+}
+
+@media only screen and (max-width: 950px){
+  .backDrop_content{
+    width: 500px;
+
+    h1{
+      font-size: 30px;
+    }
+  }
+  
+  .backDrop_info{
+
+    span{
+      font-size: 22px;
+    }
+  }
+
+  .category{
+
+    h1{
+      font-size: 20px;
+    }
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  .buttonLeft{
+
+    &:hover{
+  
+      mat-icon{
+        transform: scale(1.6);
+      }
+    }
+
+    mat-icon{
+      transform: scale(1.4);
+    }
+  }
+
+  .buttonRight{
+
+    &:hover{
+  
+      mat-icon{
+        transform: scale(1.6);
+      }
+    }
+
+    mat-icon{
+      transform: scale(1.4);
+    }
+  }
+
+}
+
+@media only screen and (max-width: 580px){
+  
+  .backDrop_content{
+    width: 350px;
+
+    h1{
+      font-size: 24px;
+    }
+  }
+
+  .backDrop_info{
+
+    span{
+      font-size: 18px;
+    }
+  }
+
+  .category{
+
+    h1{
+      font-size: 16px;
+    }
+  }
+
+  p{
+    font-size: 14px;
+  }
+
+  .buttonLeft{
+
+    &:hover{
+  
+      mat-icon{
+        transform: scale(1.2);
+      }
+    }
+
+    mat-icon{
+      transform: scale(1.0);
+    }
+  }
+
+  .buttonRight{
+
+    &:hover{
+  
+      mat-icon{
+        transform: scale(1.2);
+      }
+    }
+
+    mat-icon{
+      transform: scale(1.0);
+    }
+  }
+}
 
 

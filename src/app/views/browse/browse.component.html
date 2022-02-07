@@ -1,6 +1,17 @@
-<app-profile-browse (isSelectedEmitter)='changeIsSelected($event)' *ngIf="isSelected == false"></app-profile-browse>
+<app-profile-browse
+  (isSelectedEmitter)="changeIsSelected($event)"
+  *ngIf="isSelected == false"
+></app-profile-browse>
 
-<app-header-browse pathRouter="/browse" *ngIf="isSelected == true && isLoad == true"></app-header-browse>
-<app-main-browse (isLoad)='changeIsLoad($event)' *ngIf="isSelected == true"></app-main-browse>
-<app-footer-browse *ngIf="isSelected == true && isLoad == true"></app-footer-browse>
-
+<app-header-browse
+  (backProfile)="backFromProfiles($event)"
+  pathRouter="/browse"
+  *ngIf="isSelected == true && isLoad == true"
+></app-header-browse>
+<app-main-browse
+  (isLoad)="changeIsLoad($event)"
+  *ngIf="isSelected == true"
+></app-main-browse>
+<app-footer-browse
+  *ngIf="isSelected == true && isLoad == true"
+></app-footer-browse>

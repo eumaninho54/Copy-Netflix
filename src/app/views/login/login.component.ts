@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../components/login/login.service';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,9 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    Aos.init({
+      duration: 2000,
+    })
     this.loginService.autoLogin()
   }
 

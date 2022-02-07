@@ -1,3 +1,4 @@
+import { LoginService } from 'src/app/components/login/login.service';
 import { Component, ElementRef, OnChanges, OnInit, Renderer2 } from '@angular/core';
 import * as Aos from 'aos';
 
@@ -9,6 +10,7 @@ import * as Aos from 'aos';
 export class HomeMainComponent implements OnInit {
 
   constructor(
+    private loginService: LoginService
   ) { }
 
   ngOnInit(): void {
@@ -16,5 +18,9 @@ export class HomeMainComponent implements OnInit {
       duration: 2000,
       
     })
+  }
+
+  loginSignIn(){
+    this.loginService.verificLogin(true)
   }
 }

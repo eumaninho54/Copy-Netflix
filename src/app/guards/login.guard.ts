@@ -6,7 +6,7 @@ import { LoginService } from '../components/login/login.service';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginGuard implements CanActivate, CanActivateChild, CanDeactivate<unknown>, CanLoad {
+export class LoginGuard implements CanActivate{
 
   constructor(
     private loginService: LoginService,
@@ -14,7 +14,7 @@ export class LoginGuard implements CanActivate, CanActivateChild, CanDeactivate<
   ){}
 
   private verificAcess(){
-    if (this.loginService.authenticatedLogin() || this.loginService.authenticatedToken()){
+    if ( this.loginService.authenticatedToken()){
       return true
     } 
   
@@ -28,26 +28,5 @@ export class LoginGuard implements CanActivate, CanActivateChild, CanDeactivate<
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
     return this.verificAcess()
-  }
-
-  canLoad(
-    route: Route,
-    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    
-      return this.verificAcess()
-  }
-
-  canActivateChild(
-    childRoute: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
-  }
-
-  canDeactivate(
-    component: unknown,
-    currentRoute: ActivatedRouteSnapshot,
-    currentState: RouterStateSnapshot,
-    nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
   }
 }

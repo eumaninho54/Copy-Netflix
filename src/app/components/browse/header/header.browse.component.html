@@ -19,7 +19,11 @@
     <nav class="options">
        <a><mat-icon aria-hidden="false" aria-label="Search movie">search</mat-icon></a>
        <a><mat-icon aria-hidden="false" aria-label="notifications">notifications</mat-icon></a>
-       <a class="img"><img src="https://occ-0-1831-559.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABb7_xK-FFKYnTC7GwGIEmh9SAhb72XwHgWQIDhiX-GmSB0C-Jz7-eMJW8sL8OguWrgFIL3VWSMND6MssBT2-tzzF9Tyw.png?r=e59" alt="image_profile"></a>
+       <a [matMenuTriggerFor]="menu" class="img"><img src="https://occ-0-1831-559.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABb7_xK-FFKYnTC7GwGIEmh9SAhb72XwHgWQIDhiX-GmSB0C-Jz7-eMJW8sL8OguWrgFIL3VWSMND6MssBT2-tzzF9Tyw.png?r=e59" alt="image_profile"></a>
+       <mat-menu #menu="matMenu">
+        <button  (click)="backProfiles()" mat-menu-item>Manage profiles</button>
+        <button (click)="logout()" mat-menu-item>Leave Netflix</button>
+      </mat-menu>
     </nav>
   </div>
 </div>

@@ -1,6 +1,5 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import * as Aos from 'aos';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/components/login/login.service';
 
 @Component({
@@ -19,10 +18,6 @@ export class LoginMainComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    Aos.init({
-      duration: 2000,
-    })
-
     this.loginFormGroup = this.formBuilder.group({
       'email' : ['', [Validators.required, Validators.pattern]],
       'password': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(60)]]

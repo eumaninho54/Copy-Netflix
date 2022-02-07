@@ -14,11 +14,10 @@ export class HomeGuard implements CanActivate {
   ){}
 
   private verificAcess(){
-    if (this.loginService.authenticatedLogin() || this.loginService.authenticatedToken()){
+    if ( this.loginService.authenticatedToken()){
       this.router.navigate(['/browse'])
       return false
     } 
-  
   
     return true
   }

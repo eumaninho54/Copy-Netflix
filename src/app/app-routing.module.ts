@@ -17,8 +17,7 @@ const routes: Routes = [
   {
     path: "browse",
     component: BrowseComponent,
-    canActivate: [LoginGuard],
-    canLoad: [LoginGuard]
+    canActivate: [LoginGuard]
   },
   {
     path:"notfound",

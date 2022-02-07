@@ -15,18 +15,16 @@
         <mat-label>Email address</mat-label>
         <input matInput placeholder="Ex. user@mail.com" />
       </mat-form-field>
-      <button data-aos="fade-up" data-aos-once="true" mat-button class="getStarted">
+      <button (click)="loginSignIn()" data-aos="fade-up" data-aos-once="true" mat-button class="getStarted">
         Get Started
       </button>
     </div>
   </div>
 
   <img
-    src="https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/cc4fc6fd-ed99-4414-9998-97632daee2b9/BR-en-20220111-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+    src="https://assets.nflxext.com/ffe/siteui/vlv3/eb482c64-e879-4e88-9ddc-d839cb7d1232/e9e3f8d0-711a-448e-8441-33b269740de7/BR-en-20220131-popsignuptwoweeks-perspective_alpha_website_small.jpg"
     srcset="
-      https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/cc4fc6fd-ed99-4414-9998-97632daee2b9/BR-en-20220111-popsignuptwoweeks-perspective_alpha_website_small.jpg  1000w,
-      https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/cc4fc6fd-ed99-4414-9998-97632daee2b9/BR-en-20220111-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w,
-      https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/cc4fc6fd-ed99-4414-9998-97632daee2b9/BR-en-20220111-popsignuptwoweeks-perspective_alpha_website_large.jpg  1800w
+    https://assets.nflxext.com/ffe/siteui/vlv3/eb482c64-e879-4e88-9ddc-d839cb7d1232/e9e3f8d0-711a-448e-8441-33b269740de7/BR-en-20220131-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/eb482c64-e879-4e88-9ddc-d839cb7d1232/e9e3f8d0-711a-448e-8441-33b269740de7/BR-en-20220131-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/eb482c64-e879-4e88-9ddc-d839cb7d1232/e9e3f8d0-711a-448e-8441-33b269740de7/BR-en-20220131-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w
     "
     alt="background"
   />
@@ -224,7 +222,7 @@
         <mat-label>Email address</mat-label>
         <input matInput placeholder="Ex. user@mail.com" />
       </mat-form-field>
-      <button mat-button class="getStarted">Get Started</button>
+      <button (click)="loginSignIn()" mat-button class="getStarted">Get Started</button>
     </div>
   </div>
 </section>

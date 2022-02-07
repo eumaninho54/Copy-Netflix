@@ -1,5 +1,6 @@
 import { ProfileService } from '../../components/browse/profile/profile.service';
 import { Component, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-browse',
@@ -16,6 +17,9 @@ export class BrowseComponent implements OnInit{
   ) { }
 
   ngOnInit(): void {
+    Aos.init({
+      duration: 2000,
+    })
   }
 
   changeIsSelected(change: boolean){
@@ -23,6 +27,11 @@ export class BrowseComponent implements OnInit{
   }
 
   changeIsLoad(change: boolean){
+    this.isLoad = change
+  }
+
+  backFromProfiles(change: boolean){
+    this.isSelected = change
     this.isLoad = change
   }
 
