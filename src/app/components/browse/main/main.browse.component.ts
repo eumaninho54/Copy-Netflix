@@ -1,6 +1,8 @@
-import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener, ElementRef, Renderer2, EventEmitter, Output } from '@angular/core';
 import { MoviesService } from '../movies.service';
 import { SwiperComponent } from 'swiper/angular';
+import { moviesInfo } from '../browse.model';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-main-browse',
@@ -15,31 +17,49 @@ export class MainBrowseComponent implements OnInit {
   @ViewChild('swiper4') swiper4!: SwiperComponent
   @ViewChild('swiper5') swiper5!: SwiperComponent
 
+  @Output() isLoad = new EventEmitter()
+
   @HostListener('window:resize', ['$event'])
-  onResize(event: any){
+  onResize(){
     this.resizeWidthImage()
   }
 
-  allMovies!: any;
-  trendingNow!: any;
-  topRated!: any;
-  recommended!: any;
-  action!: any;
-  drama!: any;
+  allMovies!: moviesInfo[];
+  trendingNow!: moviesInfo[];
+  topRated!: moviesInfo[];
+  recommended!: moviesInfo[];
+  action!: moviesInfo[];
+  drama!: moviesInfo[];
 
   randomBackDrop!: any;
   slidesPerView!: number;
+  isLoading: boolean = false;
+
+  lottieOptions: AnimationOptions = {
+    path: '../../../../assets/Lottie/29313-netflix-logo-swoop.json'
+  }
 
   constructor(
-    private moviesService: MoviesService
+    private moviesService: MoviesService,
+    private elementRef: ElementRef,
+    private renderer: Renderer2
   ) { }
   
   ngOnInit(): void {
     this.moviesService.read('/discover/movie?').subscribe(({results}) => {
       this.allMovies = results
-      console.log(this.allMovies)
       this.randomBackDrop = this.allMovies[Math.floor(Math.random() * this.allMovies.length)]
-      this.resizeWidthImage()
+      window.setTimeout( () => {
+        const $loading = this.elementRef.nativeElement.querySelector('.loading')
+        const $content = this.elementRef.nativeElement.querySelector('.background')
+        this.renderer.setStyle($loading, 'transition', '0.4s')
+        this.renderer.setStyle($loading, 'opacity', '0')
+        this.renderer.setStyle($content, 'display', 'initial')
+        this.isLoad.emit(true)
+        window.setTimeout( () => {
+          this.renderer.setStyle($loading, 'display', 'none')
+        }, 800)
+      }, 3200)
     })
     this.moviesService.read('/trending/all/day?').subscribe(({results}) => {
       this.trendingNow = results
@@ -55,7 +75,7 @@ export class MainBrowseComponent implements OnInit {
     })
     this.moviesService.read('/movie/25678/similar?').subscribe(({results}) =>{
       this.drama = results
-      console.log(this.drama)
+      this.resizeWidthImage()
     })
   }
 
@@ -134,4 +154,7 @@ export class MainBrowseComponent implements OnInit {
       this.slidesPerView = 11
     }
   }
+
+
+
 }

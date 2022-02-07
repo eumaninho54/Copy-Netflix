@@ -1,6 +1,7 @@
 .background {
   flex: 1 1 0%;
   user-select: none;
+  display: none;
 }
 
 .backDrop_image {
@@ -107,7 +108,7 @@ p{
 .movies_divisions{
   margin: -320px 0px 0px 0px;
   background-color: black;
-  padding-bottom: 200px;
+
   background: linear-gradient(to top, #000000 80%, transparent);
 
 }
@@ -141,6 +142,7 @@ p{
     max-width: 210px;
     border-radius: 4px;
     transition: 0.4s;
+    cursor: pointer;
 
     &:hover{
       position: absolute;
@@ -213,5 +215,24 @@ p{
   }
 
 }
+
+
+.loading{
+  position: absolute;
+  z-index: 5;
+  background-color: rgb(20, 20, 20);
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.loading_content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 

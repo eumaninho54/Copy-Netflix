@@ -8,22 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrowseComponent implements OnInit{
 
-  isSelected!: boolean;
+  isSelected: boolean = false;
+  isLoad: boolean = false;
 
   constructor(
     private ProfileService: ProfileService
   ) { }
 
   ngOnInit(): void {
-    if(window.localStorage.getItem('profileSelected') != null){
-      this.isSelected = true
-    }else{
-      this.isSelected = false
-    }
   }
 
   changeIsSelected(change: boolean){
     this.isSelected = change
+  }
+
+  changeIsLoad(change: boolean){
+    this.isLoad = change
   }
 
 }

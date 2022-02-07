@@ -15,8 +15,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { SwiperModule } from 'swiper/angular';
+import { LottieModule } from 'ngx-lottie';
 
-
+const playerFactory = () => {
+  return import('lottie-web')
+}
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { SwiperModule } from 'swiper/angular';
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
-    SwiperModule
+    SwiperModule,
+    LottieModule.forRoot({player: playerFactory})
     
   ],
   exports: [BrowseComponent],
