@@ -37,3 +37,37 @@
 option {
   font-size: 14px;
 }
+
+@media only screen and (max-width: 950px){
+
+  mat-form-field{
+    width: 70px !important;
+    margin-right: 5px;
+  }
+
+  button{
+    font-size: 14px !important;
+  }
+
+  .logo{
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 580px){
+
+  mat-form-field{
+    width: 70px !important;
+    margin-right: 5px;
+    font-size: 11px;
+  }
+
+  button{
+    font-size: 11px !important;
+  }
+
+  .logo{
+    height: 16px;
+  }
+
+}

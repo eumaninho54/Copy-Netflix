@@ -1,295 +1,410 @@
 .container {
-    height: 680px;
-    font-family: "Netflix Sans";
-  }
-  
-  .gradient {
-    background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.2),
-      rgb(0, 0, 0, 0.9)
-    );
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 680px;
-  }
-  
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1;
-  }
-  
-  .content {
-    position: absolute;
+  height: 680px;
+  font-family: "Netflix Sans";
+}
+
+.gradient {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.2),
+    rgb(0, 0, 0, 0.9)
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 680px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.content {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  padding-top: 220px;
+  width: 100%;
+
+  h1 {
     text-align: center;
+    font-weight: bold;
+    font-size: 50px;
     margin: auto;
-    padding-top: 220px;
-    width: 100%;
-  
-    h1 {
-      text-align: center;
-      font-weight: bold;
-      font-size: 50px;
-      margin: auto;
-      max-width: 550px;
-      line-height: 1.1;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
-    }
-  
-    p {
-      font-size: 26px;
-      margin: auto;
-      width: 450px;
-      padding-top: 20px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
-    }
-  
-    div p {
-      font-size: 20px;
-      margin: auto;
-      width: 450px;
-      padding-top: 40px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
-    }
+    max-width: 550px;
+    line-height: 1.1;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
   }
-  
-  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    background-color: rgb(255, 255, 255);
-    text-shadow: none;
+
+  p {
+    font-size: 26px;
+    margin: auto;
+    width: 450px;
+    padding-top: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
   }
-  
-  mat-form-field {
-    width: 400px;
-    color: black;
-  }
-  
-  .getStarted {
-    background-color: #dd0611;
-    color: #ffffff;
-    font-family: "Netflix Sans";
+
+  div p {
     font-size: 20px;
-    height: 55px;
+    margin: auto;
+    width: 450px;
+    padding-top: 40px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
   }
-  
-  .sections_right {
-    background-color: black;
-    border-top: 2px solid #222;
-    padding: 70px 45px;
-  
-    margin: 8px auto auto auto;
-  
-    div.background {
-      max-width: 1100px;
-      display: flex;
-      align-items: center;
-      flex-direction: row wrap;
-      justify-content: space-between;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: rgb(255, 255, 255);
+  text-shadow: none;
+}
+
+mat-form-field {
+  width: 400px;
+  color: black;
+}
+
+.getStarted {
+  background-color: #dd0611;
+  color: #ffffff;
+  font-family: "Netflix Sans";
+  font-size: 20px;
+  height: 55px;
+}
+
+.sections_right {
+  background-color: black;
+  border-top: 2px solid #222;
+  padding: 70px 45px;
+
+  margin: 8px auto auto auto;
+
+  div.background {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    div {
       margin: 0 auto;
-  
-      div {
-        margin: 0 auto;
-      }
-    }
-  
-    h1 {
-      font-size: 45px;
-      line-height: 1.2;
-      font-weight: 600;
-    }
-  
-    h2 {
-      max-width: 500px;
-      width: auto;
-      font-size: 28px;
-      font-weight: lighter;
-    }
-  
-    img {
-      max-width: 500px;
-      width: 100%;
-      margin: auto;
     }
   }
-  
+
+  h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h2 {
+    max-width: 500px;
+    width: auto;
+    font-size: 28px;
+    font-weight: lighter;
+  }
+
+  img {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.sections_left {
+  background-color: black;
+  border-top: 2px solid #222;
+  padding: 70px 45px;
+
+  margin: 8px auto auto auto;
+
+  div.background {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    div {
+      margin: 0 auto;
+    }
+  }
+
+  h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h2 {
+    max-width: 100%;
+    width: auto;
+    font-size: 28px;
+    font-weight: lighter;
+  }
+
+  img {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.questions {
+  background-color: black;
+  border-top: 2px solid #222;
+  padding: 70px 45px;
+
+  margin: 8px auto auto auto;
+
+  div {
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: lighter;
+  }
+
+  mat-expansion-panel {
+    margin: auto;
+    max-width: 750px;
+    width: 100%;
+    background-color: #303030;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  mat-panel-title {
+    color: rgb(228, 228, 228);
+    font-size: 22px;
+  }
+
+  mat-panel-description {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 0;
+    color: rgb(228, 228, 228);
+  }
+
+  .email {
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    mat-form-field {
+      padding-top: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
   .sections_left {
-    background-color: black;
-    border-top: 2px solid #222;
-    padding: 70px 45px;
-  
-    margin: 8px auto auto auto;
-  
     div.background {
-      max-width: 1100px;
-      display: flex;
-      align-items: center;
-      flex-direction: row wrap;
-      justify-content: space-between;
-      margin: 0 auto;
-  
+      flex-direction: column-reverse;
       div {
-        margin: 0 auto;
-      }
-    }
-  
-    h1 {
-      font-size: 45px;
-      line-height: 1.2;
-      font-weight: 600;
-    }
-  
-    h2 {
-      max-width: 100%;
-      width: auto;
-      font-size: 28px;
-      font-weight: lighter;
-    }
-  
-    img {
-      max-width: 500px;
-      width: 100%;
-      margin: auto;
-    }
-  }
-  
-  .questions{
-    background-color: black;
-    border-top: 2px solid #222;
-    padding: 70px 45px;
-  
-    margin: 8px auto auto auto;
-  
-    div{
-      max-width: 1600px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: space-between;
-      margin: 0 auto;
-    }
-  
-    h1{
-      font-size: 45px;
-      line-height: 1.2;
-      padding-bottom: 20px;
-      text-align: center;
-      width: 100%;
-    }
-  
-    p{
-      font-size: 20px;
-      line-height: 1.2;
-      font-weight: lighter;
-    }
-  
-    mat-expansion-panel{
-      margin: auto;
-      max-width: 750px;
-      width: 100%;
-      background-color: #303030;
-      color: white;
-      margin-bottom: 5px;
-    }
-  
-    mat-panel-title{
-      color: rgb(228, 228, 228);
-      font-size: 22px;
-    }
-  
-    mat-panel-description{
-      display: flex;
-      align-items: center;
-      justify-content: end;
-      margin: 0;
-      color: rgb(228, 228, 228);
-    }
-  
-    .email{
-      margin: auto;
-      
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      
-      mat-form-field{
-        padding-top: 16px;
-      }
-    }
-  }
-  
-  
-  
-  @media only screen and (max-width: 950px) {
-    .sections_right {
-      div.background {
-        flex-direction: column;
-        div {
-          text-align: center;
-        }
-  
-        h2 {
-          width: auto;
-          margin: 0.75em 0 0.25em;
-          display: block;
-          font-size: 22px;
-        }
-      }
-  
-      .email {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .content {
-        h1 {
-          font-size: 42px;
-        }
-      }
-    }
-  
-    .sections_left {
-      div.background {
-        flex-direction: column-reverse;
-        div {
-          text-align: center;
-        }
-  
-        h2 {
-          width: auto;
-          margin: 0;
-          display: block;
-          font-size: 22px;
-        }
-      }
-  
-      .email {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .content {
-        h1 {
-          font-size: 42px;
-        }
-      }
-    }
-  
-    .questions{
-      .email {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .p_email{
         text-align: center;
       }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        width: auto;
+        margin: 0;
+        display: block;
+        font-size: 20px;
+      }
     }
-  
+
+    .email {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
+
+  .questions {
+    .email {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .p_email {
+      text-align: center;
+    }
+  }
+
+  .sections_right {
+    div.background {
+      flex-direction: column;
+      div {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        width: auto;
+        margin: 0.75em 0 0.25em;
+        display: block;
+        font-size: 20px;
+      }
+    }
+
+    .email {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .content {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    div {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  mat-form-field {
+    width: 200px;
+  }
+
+  .getStarted {
+    font-size: 16px;
+  }
+
+  .questions {
+    h1 {
+      font-size: 32px;
+    }
+
+    mat-panel-title {
+      font-size: 18px;
+    }
+
+    mat-expansion-panel p {
+      font-size: 16px;
+    }
+  }
+
+  .p_email {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+
+  .content {
+    h1 {
+      font-size: 30px;
+      width: 300px;
+    }
+
+    p {
+      font-size: 15px;
+      width: 220px;
+    
+    }
+
+    div {
+      p {
+        font-size: 13px;
+        width: 220px;
+      }
+    }
+  }
+  mat-form-field {
+    width: 200px;
+  }
+
+  .getStarted {
+    font-size: 11px;
+    display: block;
+    margin: auto;
+  }
+
+  .questions {
+    h1 {
+      font-size: 24px;
+    }
+
+    mat-panel-title {
+      font-size: 16px;
+    }
+
+    mat-expansion-panel p {
+      font-size: 14px;
+    }
+  }
+
+  .p_email {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .sections_left {
+    div.background {
+
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .sections_right {
+    div.background {
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+    }
+  }
+
+}

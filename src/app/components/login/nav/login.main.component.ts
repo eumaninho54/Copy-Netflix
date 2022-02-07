@@ -4,8 +4,8 @@ import { LoginService } from 'src/app/components/login/login.service';
 
 @Component({
   selector: 'app-login-main',
-  templateUrl: './login.Main.component.html',
-  styleUrls: ['./login.Main.component.scss']
+  templateUrl: './login.main.component.html',
+  styleUrls: ['./login.main.component.scss']
 })
 export class LoginMainComponent implements OnInit {
   messageError: boolean = false

@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: left;
   height: inherit;
-  padding-top: 250px;
+  padding-top: 20vh;
   margin-left: 3.5%;
   width: 700px;
   text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.226);
@@ -246,20 +246,14 @@ p{
 }
 
 @media only screen and (max-width: 950px){
-  .backDrop_content{
-    width: 500px;
-
-    h1{
-      font-size: 30px;
-    }
+  .backDrop_image{
+    display: none;
   }
-  
-  .backDrop_info{
 
-    span{
-      font-size: 22px;
-    }
+  .movies_divisions{
+    padding-top: 400px;
   }
+
 
   .category{
 
@@ -304,21 +298,6 @@ p{
 
 @media only screen and (max-width: 580px){
   
-  .backDrop_content{
-    width: 350px;
-
-    h1{
-      font-size: 24px;
-    }
-  }
-
-  .backDrop_info{
-
-    span{
-      font-size: 18px;
-    }
-  }
-
   .category{
 
     h1{
@@ -358,5 +337,3 @@ p{
     }
   }
 }
-
-

@@ -143,3 +143,22 @@ img {
 ::ng-deep .mat-checkbox-inner-container .mat-checkbox-background {
   background-color: #cccccc;
 }
+
+@media only screen and (max-width: 580px){
+  .content{
+    width: 80%;
+    margin: auto;
+    right: 0%;
+    left: 0%;
+
+    .message-error{
+      font-size: 12px;
+    }
+
+    .login-body{
+      width: auto;
+      height: 620px;
+      padding: 10% 10%;
+    }
+  }
+}
