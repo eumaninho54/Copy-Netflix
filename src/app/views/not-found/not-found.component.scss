@@ -1,7 +1,10 @@
 app-template-header-logo-netflix{
   position: fixed;
-  margin-left: 5%;
+  padding-left: 5%;
   z-index: 2;
+  background-color: black;
+  height: 100px;
+  width: 100%;
 }
 
 .container {
