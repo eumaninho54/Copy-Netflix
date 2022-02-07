@@ -1,6 +1,31 @@
-# CopyNetflix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+<p align= "center">
+  <img src="https://user-images.githubusercontent.com/87163356/152875958-7f99abd4-63a8-4127-b230-df9e2c789538.png" style="height: 150px">
+</p>
+
+
+# CopyNetflix 🍿
+
+
+Project developed with Angular (13.0.3). First project using Angular technology. Developed a copy of the Netflix page.
+Access the page at this link: https://ymaninho54.github.io/Copy-Netflix/
+
+## About 💻
+
+Several implementations were learned and developed in this project, among the new knowledge there are: LocalStorage, Router Guard, communication between components, and others.
+
+## Images 📸
+
+<img src="https://user-images.githubusercontent.com/87163356/152878693-e202c44e-16b2-4717-8d05-f83b1d07400e.png" style="height: 80%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/87163356/152878714-5fe1e809-a446-4d9a-afe6-866ccc3f8e4b.png" height= 600>
+</p>
+
+
+
+![copy-netflix](https://user-images.githubusercontent.com/87163356/152880821-b5f7606b-4c92-4324-b6ab-8faa1535885a.gif)
+
+
 
 ## Development server
 
