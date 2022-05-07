@@ -8,7 +8,7 @@
 
 
 Project developed with Angular (13.0.3). First project using Angular technology. Developed a copy of the Netflix page.
-Access the page at this link: https://ymaninho54.github.io/Copy-Netflix/
+Access the page at this link: https://eumaninho54.github.io/Copy-Netflix/
 
 ## About 💻
 
